@@ -1,0 +1,72 @@
+00002248 <main>:
+    2248:	d7 e1 17 f8 	l.sw 0xfffffff8(r1),r2
+    224c:	9c 41 00 00 	l.addi r2,r1,0x0
+    2250:	d7 e1 4f fc 	l.sw 0xfffffffc(r1),r9
+    2254:	9c 21 ff e8 	l.addi r1,r1,0xffffffe8
+    2258:	d7 e2 1f f0 	l.sw 0xfffffff0(r2),r3
+    225c:	d7 e2 27 ec 	l.sw 0xffffffec(r2),r4
+    2260:	9c 60 00 01 	l.addi r3,r0,0x1
+    2264:	d4 01 18 00 	l.sw 0x0(r1),r3
+    2268:	9c 60 00 01 	l.addi r3,r0,0x1
+    226c:	9c 80 00 01 	l.addi r4,r0,0x1
+    2270:	9c a0 00 01 	l.addi r5,r0,0x1
+    2274:	9c c0 00 01 	l.addi r6,r0,0x1
+    2278:	9c e0 00 01 	l.addi r7,r0,0x1
+    227c:	9d 00 00 01 	l.addi r8,r0,0x1
+    2280:	04 00 00 0a 	l.jal 22a8 <operacion>
+    2284:	15 00 00 00 	l.nop 0x0
+    2288:	d7 e2 5f f4 	l.sw 0xfffffff4(r2),r11
+    228c:	9c 60 00 00 	l.addi r3,r0,0x0
+    2290:	a9 63 00 00 	l.ori r11,r3,0x0
+    2294:	a8 22 00 00 	l.ori r1,r2,0x0
+    2298:	84 41 ff f8 	l.lwz r2,0xfffffff8(r1)
+    229c:	85 21 ff fc 	l.lwz r9,0xfffffffc(r1)
+    22a0:	44 00 48 00 	l.jr r9
+    22a4:	15 00 00 00 	l.nop 0x0
+
+000022a8 <operacion>:
+    22a8:	d7 e1 17 fc 	l.sw 0xfffffffc(r1),r2
+    22ac:	9c 41 00 00 	l.addi r2,r1,0x0
+    22b0:	9c 21 ff e0 	l.addi r1,r1,0xffffffe0
+    22b4:	d7 e2 1f f4 	l.sw 0xfffffff4(r2),r3
+    22b8:	d7 e2 27 f0 	l.sw 0xfffffff0(r2),r4
+    22bc:	d7 e2 2f ec 	l.sw 0xffffffec(r2),r5
+    22c0:	d7 e2 37 e8 	l.sw 0xffffffe8(r2),r6
+    22c4:	d7 e2 3f e4 	l.sw 0xffffffe4(r2),r7
+    22c8:	d7 e2 47 e0 	l.sw 0xffffffe0(r2),r8
+    22cc:	84 62 00 00 	l.lwz r3,0x0(r2)
+    22d0:	bd a3 00 04 	l.sflesi r3,0x4
+    22d4:	10 00 00 10 	l.bf 2314 <operacion+0x6c>
+    22d8:	15 00 00 00 	l.nop 0x0
+    22dc:	84 82 ff f4 	l.lwz r4,0xfffffff4(r2)
+    22e0:	84 62 ff f0 	l.lwz r3,0xfffffff0(r2)
+    22e4:	e0 84 18 00 	l.add r4,r4,r3
+    22e8:	84 62 ff ec 	l.lwz r3,0xffffffec(r2)
+    22ec:	e0 84 18 00 	l.add r4,r4,r3
+    22f0:	84 62 ff e8 	l.lwz r3,0xffffffe8(r2)
+    22f4:	e0 84 18 00 	l.add r4,r4,r3
+    22f8:	84 62 ff e4 	l.lwz r3,0xffffffe4(r2)
+    22fc:	e0 84 18 02 	l.sub r4,r4,r3
+    2300:	84 62 ff e0 	l.lwz r3,0xffffffe0(r2)
+    2304:	e0 64 18 02 	l.sub r3,r4,r3
+    2308:	d7 e2 1f f8 	l.sw 0xfffffff8(r2),r3
+    230c:	00 00 00 0e 	l.j 2344 <operacion+0x9c>
+    2310:	15 00 00 00 	l.nop 0x0
+    2314:	84 82 ff f4 	l.lwz r4,0xfffffff4(r2)
+    2318:	84 62 ff f0 	l.lwz r3,0xfffffff0(r2)
+    231c:	e0 84 18 00 	l.add r4,r4,r3
+    2320:	84 62 ff ec 	l.lwz r3,0xffffffec(r2)
+    2324:	e0 84 18 00 	l.add r4,r4,r3
+    2328:	84 62 ff e8 	l.lwz r3,0xffffffe8(r2)
+    232c:	e0 84 18 00 	l.add r4,r4,r3
+    2330:	84 62 ff e4 	l.lwz r3,0xffffffe4(r2)
+    2334:	e0 84 18 00 	l.add r4,r4,r3
+    2338:	84 62 ff e0 	l.lwz r3,0xffffffe0(r2)
+    233c:	e0 64 18 02 	l.sub r3,r4,r3
+    2340:	d7 e2 1f f8 	l.sw 0xfffffff8(r2),r3
+    2344:	84 62 ff f8 	l.lwz r3,0xfffffff8(r2)
+    2348:	a9 63 00 00 	l.ori r11,r3,0x0
+    234c:	a8 22 00 00 	l.ori r1,r2,0x0
+    2350:	84 41 ff fc 	l.lwz r2,0xfffffffc(r1)
+    2354:	44 00 48 00 	l.jr r9
+    2358:	15 00 00 00 	l.nop 0x0
